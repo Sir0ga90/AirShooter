@@ -25,7 +25,7 @@ public:
 
 private:
     QGraphicsScene* scene;
-    MyRect* player;
+    Player* player;
     Score* score;
     Health* health;
     QMediaPlayer* backGroundMusicPlayer;

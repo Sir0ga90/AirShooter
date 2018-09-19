@@ -7,11 +7,11 @@
 
 #include <memory>
 
-class MyRect : public QObject,
+class Player : public QObject,
         public QGraphicsPixmapItem{
     Q_OBJECT
 public:
-    MyRect(QGraphicsItem* parent = nullptr);
+    Player(QGraphicsItem* parent = nullptr);
     void keyPressEvent(QKeyEvent* event);
     void setGameEnd();
 

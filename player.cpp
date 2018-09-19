@@ -9,7 +9,7 @@
 #include "memory"
 
 
-MyRect::MyRect(QGraphicsItem* _parent/*=nullptr*/) :
+Player::Player(QGraphicsItem* _parent/*=nullptr*/) :
     isGameInProcess(true)
 {
     bulletSound.reset(new QMediaPlayer());
@@ -18,7 +18,7 @@ MyRect::MyRect(QGraphicsItem* _parent/*=nullptr*/) :
     setPixmap(QPixmap(":/images/player.png"));
 }
 
-void MyRect::keyPressEvent(QKeyEvent* _event){
+void Player::keyPressEvent(QKeyEvent* _event){
     constexpr uint MOVE_STEP = 10u;
 
     if(isGameInProcess){
@@ -64,12 +64,12 @@ void MyRect::keyPressEvent(QKeyEvent* _event){
 }
 
 
-void MyRect::setGameEnd(){
+void Player::setGameEnd(){
     isGameInProcess = false;
 }
 
 
-void MyRect::spawn(){
+void Player::spawn(){
 
     if(isGameInProcess)
     {

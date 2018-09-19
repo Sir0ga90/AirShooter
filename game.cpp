@@ -20,7 +20,7 @@ Game::Game(QWidget* _parent/*=nullptr*/){
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setFixedSize(VIEW_WIDTH, VIEW_HEIGHT);
 
-    player = new MyRect();
+    player = new Player();
     player->setPos(width()/2,
                    height() - player->pixmap().height());
     player->setFlag(QGraphicsItem::ItemIsFocusable);
